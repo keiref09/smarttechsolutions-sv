@@ -1,73 +1,64 @@
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Segoe UI, sans-serif;
 }
 
 body {
-  background-color: #f4f6f8;
-  color: #07161d;
+  background: #07161d;
+  color: white;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
+
 .header {
-  background-color: #07161d;
-  padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 60px;
+  background: #0a1f2b;
 }
 
-.brand {
+.logo-container {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.brand img {
-  height: 70px;
+.logo-container img {
+  width: 70px;
 }
 
-.company-name {
-  color: white;
+.logo-container h2 {
   font-size: 22px;
-  font-weight: 600;
 }
 
 .menu-icon {
   font-size: 28px;
-  color: white;
   cursor: pointer;
 }
 
-/* ===== MENÚ ===== */
+/* MENU */
+
 .menu {
   position: fixed;
   top: 0;
-  right: -260px;
-  width: 260px;
+  right: -100%;
+  width: 250px;
   height: 100%;
-  background: #07161d;
+  background: #0f2d3c;
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
-  transition: 0.4s ease;
-  z-index: 9999;
+  padding: 40px;
+  transition: 0.4s;
 }
 
 .menu a {
   color: white;
   text-decoration: none;
-  padding: 18px 40px;
+  margin: 15px 0;
   font-size: 18px;
-  transition: 0.3s;
-}
-
-.menu a:hover {
-  background-color: #4a5c6a;
-  padding-left: 50px;
 }
 
 .menu.active {
@@ -75,131 +66,117 @@ body {
 }
 
 .close-btn {
-  position: absolute;
-  top: 25px;
-  right: 30px;
-  color: white;
-  font-size: 26px;
+  align-self: flex-end;
   cursor: pointer;
+  font-size: 22px;
 }
 
-/* ===== HERO ===== */
+/* HERO */
+
 .hero {
-  height: 85vh;
-  background-image: url("principal.jpg");
-  background-size: cover;
-  background-position: center;
-  position: relative;
+  height: 80vh;
+  background: url("principal.jpg") center/cover no-repeat;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
 .overlay {
-  background: rgba(7, 22, 29, 0.75);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
+  border-radius: 12px;
 }
 
 .overlay h1 {
-  font-size: 48px;
-  margin-bottom: 15px;
+  font-size: 40px;
 }
 
 .overlay p {
+  margin-top: 10px;
   font-size: 18px;
 }
 
-/* ===== HISTORIA ===== */
+/* HISTORIA */
+
 .historia {
-  padding: 70px 80px;
+  padding: 70px 60px;
   text-align: center;
 }
 
 .historia h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-.historia p {
-  max-width: 800px;
-  margin: auto;
-  font-size: 17px;
-  line-height: 1.6;
-  color: #4a5c6a;
-}
+/* SECCIONES FLEX */
 
-/* ===== SECCIONES FLEX (SIN ESPACIOS GRANDES) ===== */
 .section-flex {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
-  padding: 60px 80px;
-  max-width: 1200px;
-  margin: auto;
+  padding: 60px;
 }
 
-.section-flex .text {
-  flex: 1;
-}
-
-.section-flex .text h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.section-flex .text p {
-  font-size: 17px;
-  line-height: 1.6;
-  color: #4a5c6a;
-}
-
-.section-flex .image {
-  flex: 1;
-  text-align: center;
-}
-
-.section-flex .image img {
-  width: 100%;
-  max-width: 420px;
-  border-radius: 18px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-}
-
-.reverse {
+.section-flex.reverse {
   flex-direction: row-reverse;
 }
 
-/* ===== CRECIMIENTO ===== */
+.section-flex img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+}
+
+.section-flex .text {
+  max-width: 500px;
+}
+
+/* CRECIMIENTO */
+
 .crecimiento {
-  background-color: #07161d;
-  color: white;
-  padding: 80px 60px;
+  padding: 70px 60px;
   text-align: center;
+  background: #0a1f2b;
 }
 
 .stats-container {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 40px;
+  margin-top: 30px;
   flex-wrap: wrap;
-  margin-top: 40px;
 }
 
 .stat h3 {
-  font-size: 42px;
-  color: #4a5c6a;
+  font-size: 32px;
+  color: #00bcd4;
 }
 
-.stat p {
-  font-size: 17px;
-  margin-top: 8px;
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .header {
+    padding: 15px 20px;
+  }
+
+  .section-flex,
+  .section-flex.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .overlay h1 {
+    font-size: 28px;
+  }
+
+  .overlay p {
+    font-size: 16px;
+  }
+
+  .logo-container img {
+    width: 55px;
+  }
+
 }
