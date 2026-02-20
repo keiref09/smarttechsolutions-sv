@@ -1,28 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto | Smart Tech Solutions</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
 <body>
 
-<div class="page-container">
+<header class="header">
+  <div class="brand">
+    <img src="logo.jpg" alt="Smart Tech Solutions">
+    <span class="company-name">Smart Tech Solutions</span>
+  </div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
 
-  <h1 class="page-title">Contáctanos</h1>
+<nav id="menu" class="menu">
+  <span class="close-btn" onclick="toggleMenu()">✕</span>
+  <a href="index.html">Inicio</a>
+  <a href="productos.html">Productos</a>
+  <a href="talento.html">Talento</a>
+</nav>
 
-  <div class="card-container">
-    <div class="card">
-      <h3>Email</h3>
-      <p>contacto@techcompany.com</p>
-    </div>
+<section class="contact-section">
 
-    <div class="card">
-      <h3>Teléfono</h3>
-      <p>+503 0000-0000</p>
-    </div>
+  <h1>Contáctanos</h1>
+  <p class="contact-intro">
+    Estamos listos para ayudarte. Puedes comunicarte con nosotros por redes sociales,
+    WhatsApp o enviarnos un mensaje directo mediante el formulario.
+  </p>
 
-    <div class="card">
-      <h3>Ubicación</h3>
-      <p>San Salvador, El Salvador</p>
-    </div>
+  <!-- REDES -->
+  <div class="social-links">
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
   </div>
 
-  <a href="index.html" class="btn-back">Volver al inicio</a>
+  <!-- WHATSAPP -->
+  <div class="whatsapp">
+    <a href="https://wa.me/50300000000" target="_blank">
+      📱 Escríbenos por WhatsApp
+    </a>
+  </div>
 
-</div>
+  <!-- CORREO DIRECTO -->
+  <div class="email-direct">
+    📧 contacto@smarttechsolutions.com
+  </div>
+
+  <!-- FORMULARIO -->
+  <form class="contact-form">
+    <input type="text" placeholder="Nombre completo" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <input type="text" placeholder="Asunto">
+    <textarea placeholder="Escribe tu mensaje aquí..." required></textarea>
+    <button type="submit">Enviar mensaje</button>
+  </form>
+
+</section>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
+</html>
