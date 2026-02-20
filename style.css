@@ -208,9 +208,23 @@ img {
   .section-flex.reverse {
     flex-direction: column;
     text-align: center;
+    /* CENTRAR TEXTOS */
+
+.historia {
+  text-align: center;
+}
+
+.section-flex .text {
+  text-align: center;   /* 👈 centra misión y visión */
+}
+
+.section-flex .text h2 {
+  margin-bottom: 15px;
+}
   }
 
 }
+
 
 
 
