@@ -14,10 +14,12 @@ body {
 
 /* ===== HEADER ===== */
 
+/* ===== HEADER ===== */
+
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between; /* 👈 Esto empuja uno a cada lado */
   padding: 15px 60px;
   background: #0a1f2b;
   color: white;
@@ -29,14 +31,11 @@ body {
   gap: 12px;
 }
 
-.brand img {
-  width: 50px;
-  height: auto;
-}
-
-.company-name {
-  font-size: 20px;
-  font-weight: bold;
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  margin-left: auto; /* 👈 Fuerza que se vaya a la derecha */
 }
 
 /* ===== MENÚ ===== */
@@ -212,6 +211,7 @@ img {
   }
 
 }
+
 
 
 
