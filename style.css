@@ -84,7 +84,7 @@ body {
 
 /* Imagen Principal */
 
-.Principal {
+.hero {
   height: 85vh;
   background: url("principal.jpg") center/cover no-repeat;
   display: flex;
@@ -216,6 +216,7 @@ img {
   }
 
 }
+
 
 
 
