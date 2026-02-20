@@ -12,13 +12,12 @@ body {
   color: #222;
 }
 
-
 /* ===== HEADER ===== */
 
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* 👈 Esto empuja uno a cada lado */
+  justify-content: space-between;
   padding: 15px 60px;
   background: #0a1f2b;
   color: white;
@@ -30,20 +29,24 @@ body {
   gap: 12px;
 }
 
+/* 🔥 LOGO CONTROLADO */
+.header .brand img {
+  width: 50px;
+  height: auto;
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .menu-icon {
   font-size: 28px;
   cursor: pointer;
   color: white;
-  margin-left: auto; /* 👈 Fuerza que se vaya a la derecha */
 }
 
 /* ===== MENÚ ===== */
-
-.menu-icon {
-  font-size: 28px;
-  cursor: pointer;
-  color: white; /* 👈 ahora sí se ven las rayitas */
-}
 
 .menu {
   position: fixed;
@@ -111,7 +114,7 @@ body {
   text-align: center;
 }
 
-/* ===== SECCIONES FLEX (Misión y Visión) ===== */
+/* ===== SECCIONES FLEX ===== */
 
 .section-flex {
   display: flex;
@@ -134,6 +137,7 @@ body {
 
 .section-flex .text {
   max-width: 500px;
+  text-align: center;
 }
 
 /* ===== CRECIMIENTO ===== */
@@ -157,7 +161,7 @@ body {
   color: #00bcd4;
 }
 
-/* ===== IMÁGENES ===== */
+/* ===== IMÁGENES GENERALES ===== */
 
 img {
   max-width: 100%;
@@ -182,7 +186,7 @@ img {
 
 @media (max-width: 600px) {
 
-  .brand img {
+  .header .brand img {
     width: 40px;
   }
 
@@ -202,31 +206,10 @@ img {
     width: 100%;
   }
 
-  /* En celular se acomodan verticalmente para que no se vea apretado */
   .section-flex,
   .section-flex.reverse {
     flex-direction: column;
     text-align: center;
-    /* CENTRAR TEXTOS */
-
-.historia {
-  text-align: center;
-}
-
-.section-flex .text {
-  text-align: center;   /* 👈 centra misión y visión */
-}
-
-.section-flex .text h2 {
-  margin-bottom: 15px;
-}
-    /* FORZAR TAMAÑO DEL LOGO */
-
-.header .brand img {
-  width: 50px !important;
-  height: auto !important;
-  max-width: 50px !important;
-}
   }
 
 }
