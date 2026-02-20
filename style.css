@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Segoe UI, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
@@ -20,18 +20,19 @@ body {
   background: #0a1f2b;
 }
 
-.logo-container {
+.brand {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.logo-container img {
+.brand img {
   width: 70px;
 }
 
-.logo-container h2 {
+.company-name {
   font-size: 22px;
+  font-weight: bold;
 }
 
 .menu-icon {
@@ -39,7 +40,7 @@ body {
   cursor: pointer;
 }
 
-/* MENU */
+/* MENÚ LATERAL */
 
 .menu {
   position: fixed;
@@ -52,6 +53,7 @@ body {
   flex-direction: column;
   padding: 40px;
   transition: 0.4s;
+  z-index: 1000;
 }
 
 .menu a {
@@ -74,7 +76,7 @@ body {
 /* HERO */
 
 .hero {
-  height: 80vh;
+  height: 85vh;
   background: url("principal.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
@@ -89,11 +91,11 @@ body {
 }
 
 .overlay h1 {
-  font-size: 40px;
+  font-size: 42px;
 }
 
 .overlay p {
-  margin-top: 10px;
+  margin-top: 15px;
   font-size: 18px;
 }
 
@@ -153,19 +155,34 @@ body {
   color: #00bcd4;
 }
 
-/* RESPONSIVE */
+/* IMÁGENES RESPONSIVE */
 
-@media (max-width: 768px) {
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-  .header {
-    padding: 15px 20px;
-  }
+/* 🔥 RESPONSIVE TABLET Y CELULAR */
+
+@media (max-width: 992px) {
 
   .section-flex,
   .section-flex.reverse {
     flex-direction: column;
     text-align: center;
   }
+
+  .header {
+    padding: 15px 30px;
+  }
+
+  .historia,
+  .crecimiento {
+    padding: 60px 30px;
+  }
+}
+
+@media (max-width: 600px) {
 
   .overlay h1 {
     font-size: 28px;
@@ -175,8 +192,15 @@ body {
     font-size: 16px;
   }
 
-  .logo-container img {
+  .brand img {
     width: 55px;
   }
 
+  .company-name {
+    font-size: 18px;
+  }
+
+  .menu {
+    width: 100%;
+  }
 }
