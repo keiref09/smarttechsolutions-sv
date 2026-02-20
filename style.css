@@ -41,9 +41,11 @@ body {
 /* MENÚ */
 
 .menu-icon {
+  .menu-icon {
   font-size: 28px;
   cursor: pointer;
-  color: white;
+  color: #0a1f2b; /* Color oscuro */
+}
 }
 
 .menu {
@@ -213,4 +215,5 @@ img {
   }
 
 }
+
 
