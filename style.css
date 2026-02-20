@@ -12,7 +12,6 @@ body {
   color: #222;
 }
 
-/* ===== HEADER ===== */
 
 /* ===== HEADER ===== */
 
@@ -221,9 +220,17 @@ img {
 .section-flex .text h2 {
   margin-bottom: 15px;
 }
+    /* FORZAR TAMAÑO DEL LOGO */
+
+.header .brand img {
+  width: 50px !important;
+  height: auto !important;
+  max-width: 50px !important;
+}
   }
 
 }
+
 
 
 
