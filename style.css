@@ -29,10 +29,12 @@ body {
   gap: 12px;
 }
 
-/* 🔥 LOGO CONTROLADO */
+/* 🔥 LOGO CONTROLADO (NO CRECE MÁS) */
 .header .brand img {
   width: 50px;
-  height: auto;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .company-name {
@@ -40,13 +42,13 @@ body {
   font-weight: bold;
 }
 
+/* ===== MENÚ ===== */
+
 .menu-icon {
   font-size: 28px;
   cursor: pointer;
   color: white;
 }
-
-/* ===== MENÚ ===== */
 
 .menu {
   position: fixed;
@@ -114,7 +116,7 @@ body {
   text-align: center;
 }
 
-/* ===== SECCIONES FLEX ===== */
+/* ===== SECCIONES FLEX (MISIÓN / VISIÓN) ===== */
 
 .section-flex {
   display: flex;
@@ -124,7 +126,7 @@ body {
   padding: 70px 60px;
 }
 
-/* Visión imagen derecha */
+/* Visión con imagen a la derecha */
 .section-flex.reverse {
   flex-direction: row-reverse;
 }
@@ -188,6 +190,7 @@ img {
 
   .header .brand img {
     width: 40px;
+    height: 40px;
   }
 
   .company-name {
