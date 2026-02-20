@@ -6,8 +6,8 @@
 }
 
 body {
-  background: #07161d;
-  color: white;
+  background: white; /* 👈 Fondo blanco */
+  color: #07161d; /* Texto oscuro para que se vea */
 }
 
 /* HEADER */
@@ -18,6 +18,7 @@ body {
   align-items: center;
   padding: 15px 60px;
   background: #0a1f2b;
+  color: white;
 }
 
 .brand {
@@ -27,7 +28,7 @@ body {
 }
 
 .brand img {
-  width: 50px;   /* 🔥 Logo más pequeño */
+  width: 50px;
   height: auto;
 }
 
@@ -41,6 +42,7 @@ body {
 .menu-icon {
   font-size: 28px;
   cursor: pointer;
+  color: white;
 }
 
 .menu {
@@ -72,6 +74,7 @@ body {
   align-self: flex-end;
   cursor: pointer;
   font-size: 22px;
+  color: white;
 }
 
 /* HERO */
@@ -89,6 +92,7 @@ body {
   background: rgba(0,0,0,0.6);
   padding: 40px;
   border-radius: 12px;
+  color: white;
 }
 
 .overlay h1 {
@@ -107,10 +111,6 @@ body {
   text-align: center;
 }
 
-.historia h2 {
-  margin-bottom: 20px;
-}
-
 /* SECCIONES FLEX */
 
 .section-flex {
@@ -121,7 +121,7 @@ body {
   padding: 70px 60px;
 }
 
-/* VISIÓN derecha en desktop */
+/* VISIÓN derecha */
 .section-flex.reverse {
   flex-direction: row-reverse;
 }
@@ -141,7 +141,7 @@ body {
 .crecimiento {
   padding: 70px 60px;
   text-align: center;
-  background: #0a1f2b;
+  background: #f2f2f2;
 }
 
 .stats-container {
@@ -164,7 +164,7 @@ img {
   height: auto;
 }
 
-/* 🔥 RESPONSIVE TABLET */
+/* ✅ TABLET */
 
 @media (max-width: 992px) {
 
@@ -172,24 +172,18 @@ img {
     padding: 15px 30px;
   }
 
-  .section-flex,
-  .section-flex.reverse {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .section-flex img {
-    margin-top: 20px;
+  .section-flex {
+    flex-direction: row; /* 👈 mantiene imagen y texto a la par */
   }
 
 }
 
-/* 🔥 RESPONSIVE CELULAR */
+/* ✅ CELULAR */
 
 @media (max-width: 600px) {
 
   .brand img {
-    width: 40px;   /* 🔥 Logo aún más pequeño en celular */
+    width: 40px;
   }
 
   .company-name {
@@ -206,6 +200,15 @@ img {
 
   .menu {
     width: 100%;
+  }
+
+  .section-flex {
+    flex-direction: column; /* 👈 aquí sí se pone vertical en celular */
+    text-align: center;
+  }
+
+  .section-flex.reverse {
+    flex-direction: column;
   }
 
 }
