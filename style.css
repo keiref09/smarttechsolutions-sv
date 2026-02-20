@@ -6,8 +6,9 @@
 }
 
 body {
-  background: white; /* 👈 Fondo blanco */
-  color: #07161d; /* Texto oscuro para que se vea */
+  background: white;   /* Fondo blanco */
+  color: #222;         /* Texto oscuro para que se vea */
+}
 }
 
 /* HEADER */
@@ -212,3 +213,4 @@ img {
   }
 
 }
+
